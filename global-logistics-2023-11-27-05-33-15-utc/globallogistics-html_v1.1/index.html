@@ -18,6 +18,31 @@
     <link rel="stylesheet" id="custom-style-css" href="css/custom-style.css" type="text/css" media="all">
     <style id="custom-style-inline-css" type="text/css"></style>
     <link rel="stylesheet" id="responsive-style-css" href="css/responsive.css" type="text/css" media="all">
+    <style>
+        /* Extra CSS to ensure banner images don't get scale transforms and remain clean */
+        .rev_slider .tp-bgimg,
+        .rev_slider .slotholder,
+        .rev_slider .tp-kbimg,
+        .rev_slider .tp-kbimg-wrap {
+            transform: none !important;
+            -webkit-transform: none !important;
+            animation: none !important;
+            transition: none !important;
+        }
+        /* Force no text overlays or buttons on banners */
+        .tp-caption, .tp-layer, .rev_slider .tp-caption, 
+        .rev_slider .tp-parallax-wrap, .rev_slider .tp-loop-wrap {
+            display: none !important;
+        }
+        /* Ensure slider container doesn't add extra margins/paddings */
+        .rev_slider_wrapper, .rev_slider {
+            background: transparent;
+        }
+        .fullwidthbanner-container {
+            overflow: hidden;
+            max-height: 80vh;
+        }
+    </style>
 </head>
 
 <body class="home page body_style_fullscreen body_filled article_style_stretch top_panel_opacity_transparent top_panel_over user_menu_hide sidebar_hide">
@@ -32,7 +57,7 @@
                     <div class="container">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="images/icon/157x54.png" class="logo_main" alt="">
+                                <img src="images/icon/logo.png" class="logo_main" alt="">
                                 <span class="logo_info"></span>
                             </a>
                         </div>
@@ -56,19 +81,15 @@
                                     <li class="menu-item">
                                         <a href="our-services.html">Our services</a>
                                     </li>
-                                    <!-- FIXED: About Us now correctly links to about-us.html (not features) -->
                                     <li class="menu-item">
                                         <a href="about-us.html">About Us</a>
                                     </li>
-                                    <!-- Facility & Infrastructure - New Menu Item -->
                                     <li class="menu-item">
                                         <a href="facility-infrastructure.html">Facility & Infrastructure</a>
                                     </li>
-                                    <!-- Why Us - New Menu Item -->
                                     <li class="menu-item">
                                         <a href="why-us.html">Why Us</a>
                                     </li>
-                                    <!-- Contact Us - renamed from Contact -->
                                     <li class="menu-item">
                                         <a href="contacts.html">Contact Us</a>
                                     </li>
@@ -80,113 +101,37 @@
                 </div>
             </header>           
 
+            <!-- HERO BANNER SECTION: ONLY 3 BANNERS - NO TEXT, NO BUTTONS, NO OVERLAYS -->
             <section class="slider_wrap slider_fullwide slider_engine_revo slider_alias_main">
-                        
                 <div id="rev_slider_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
-                    <!-- START REVOLUTION SLIDER 4.6.92 fullwidth mode -->
                     <div id="rev_slider_1_1" class="rev_slider fullwidthabanner tp-simpleresponsive">
-                        <ul class="tp-revslider-mainul">    <!-- SLIDE  -->
+                        <ul class="tp-revslider-mainul">    
+                            <!-- SLIDE 1: hero-banner1.png - pure image, no text layers -->
                             <li data-transition="fade" data-slotamount="7" data-masterspeed="400" data-saveperformance="off" class="tp-revslider-slidesli">
-                                <!-- MAIN IMAGE -->
                                 <div class="slotholder" data-bgposition="center top" data-bgfit="cover">
-                                    <img class="tp-bgimg defaultimg" alt="" src="images/slider/2200x1400.png" data-src="images/slider/2200x1400.png">
+                                    <img class="tp-bgimg defaultimg" alt="Hero Banner 1" src="images/slider/hero-banner1.png" data-src="images/slider/hero-banner1.png">
                                 </div>
-                                <!-- LAYERS -->
-
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption customin fadeout start" data-x="-2115" data-y="-2" data-customin="x:3000;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0.66;transformPerspective:600;transformOrigin:50% 50%;" data-speed="7700" data-start="0" data-easing="Power0.easeIn" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" data-endeasing="Quad.easeInOut">
-                                    <img src="images/slider/1889x527.png" alt=""> 
-                                </div>
-
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption trx-big tp-fade fadeout tp-resizeme start" data-x="center" data-hoffset="0" data-y="200" data-speed="500" data-start="600" data-easing="Quad.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="400">
-                                    Large enough to handle, <br>
-                                    small enough to care 
-                                </div>
-
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption customin ltr start" data-x="center" data-hoffset="-16" data-y="235" data-customin="x:-590;y:-140;z:-70;rotationX:0;rotationY:0;rotationZ:10;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="600" data-start="1200" data-easing="Quad.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="600" data-endeasing="Quad.easeIn">
-                                    <img src="images/slider/1400x283.png" alt="" data-ww="1241.696113074205" data-hh="251"> 
-                                </div>
-
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption trx-no-style sfb fadeout start" data-x="center" data-hoffset="0" data-y="500" data-speed="500" data-start="1600" data-easing="Quad.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="400">
-                                    <a href="#" class="sc_button sc_button_square sc_button_bg_light">
-                                        <span>read more</span>
-                                    </a> 
-                                </div>
+                                <!-- No text layers - completely clean banner -->
                             </li>
-                            <!-- SLIDE  -->
+                            
+                            <!-- SLIDE 2: hero-banner2.png - pure image, no text layers -->
                             <li data-transition="fade" data-slotamount="7" data-masterspeed="400" data-saveperformance="off" class="tp-revslider-slidesli">
-                                <!-- MAIN IMAGE -->
                                 <div class="slotholder" data-bgposition="center top" data-bgfit="cover">
-                                    <img class="tp-bgimg defaultimg" alt="" src="images/slider/2200x1400.png" data-src="images/slider/2200x1400.png">
-                                    <div class="slot">
-                                        <div class="slotslide">
-                                            <div></div>
-                                        </div>
-                                    </div>
+                                    <img class="tp-bgimg defaultimg" alt="Hero Banner 2" src="images/slider/hero-banner2.png" data-src="images/slider/hero-banner2.png">
                                 </div>
-                                <!-- LAYERS -->
-
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption lfl stl start" data-x="center" data-hoffset="-408" data-y="bottom" data-voffset="1" data-speed="500" data-start="1900" data-easing="Quad.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="400" data-endeasing="Quad.easeIn">
-                                    <img src="images/slider/283x246.png" alt=""> 
-                                </div>
-
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption sfr ltr start" data-x="center" data-hoffset="146" data-y="bottom" data-voffset="4" data-speed="500" data-start="1400" data-easing="Quad.easeOut" data-elementdelay="0.1" data-endelementdelay="0.5" data-endspeed="700" data-endeasing="Quad.easeIn">
-                                    <img src="images/slider/815x246.png" alt=""> 
-                                </div>
-
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption trx-big-extra tp-fade fadeout tp-resizeme start" data-x="center" data-hoffset="65" data-y="200" data-speed="500" data-start="600" data-easing="Quad.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="400">
-                                    Large enough to handle,<br>
-                                    small enough to care 
-                                </div>
-
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption randomrotate fadeout start" data-x="center" data-hoffset="435" data-y="307" data-speed="700" data-start="2500" data-easing="easeOutBounce" data-elementdelay="1" data-endelementdelay="0.1" data-endspeed="500">
-                                    <img src="images/slider/107x53.png" alt=""> 
-                                </div>
+                                <!-- No text layers - completely clean banner -->
                             </li>
-                            <!-- SLIDE  -->
+                            
+                            <!-- SLIDE 3: hero-banner3.png - pure image, no text layers -->
                             <li data-transition="fade" data-slotamount="7" data-masterspeed="400" data-saveperformance="off" class="tp-revslider-slidesli">
-                                <!-- MAIN IMAGE -->
                                 <div class="slotholder" data-bgposition="center top" data-bgfit="cover">
-                                    <img class="tp-bgimg defaultimg" alt="" src="images/slider/2200x1400.png" data-src="images/slider/2200x1400.png">
+                                    <img class="tp-bgimg defaultimg" alt="Hero Banner 3" src="images/slider/hero-banner3.png" data-src="images/slider/hero-banner3.png">
                                 </div>
-                                <!-- LAYERS -->
-
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption trx-big-left sfb fadeout tp-resizeme start" data-x="100" data-y="250" data-speed="500" data-start="1200" data-easing="Quad.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="400">
-                                    Large enough to handle,<br>
-                                    small enough to care 
-                                </div>
-
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption trx-normal-white sfb fadeout tp-resizeme start" data-x="100" data-y="370" data-speed="500" data-start="1600" data-easing="Quad.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-                                    As a market leader in global air freight forwarding, Global<br>
-                                    Logistics excels in providing tailored transportation<br>
-                                    solutions for client-specific needs.  
-                                </div>
-
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption trx-no-style sfb fadeout start" data-x="100" data-y="475" data-speed="500" data-start="2000" data-easing="Quad.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="400">
-                                    <a href="#" class="sc_button sc_button_square sc_button_bg_light">
-                                        <span>read more</span>
-                                    </a> 
-                                </div>
-
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption sfb stb start" data-x="right" data-hoffset="-120" data-y="bottom" data-voffset="10" data-speed="600" data-start="800" data-easing="Quad.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="400" data-endeasing="Quad.easeIn">
-                                    <img src="images/slider/480x538.png" alt="" data-ww="408.9807692307693" data-hh="459"> 
-                                </div>
+                                <!-- No text layers - completely clean banner -->
                             </li>
                         </ul>
                     </div>
-                                
-                </div><!-- END REVOLUTION SLIDER -->        
+                </div>
             </section>
 
             <div class="page_content">
@@ -411,8 +356,6 @@
                     </div>         
                 </section>
 
-                <!-- Service Calculator section removed completely -->
-
                 <section class="fullwidth_section grey_section no_padding_top_container timeline_section">
                     <div class="container-fluid">
                         <div class="row">
@@ -425,8 +368,6 @@
                                                 <h2 class="sc_title sc_title_regular sc_align_left">Company timeline</h2>
                                             </div>
                                             <div class="sc_section bg_tint_none">
-                                                <!-- BEGIN TIMELINE --> 
-
                                                 <div id="tl1" class="timeline flatLine">
                                                     <div class="item" data-id="01/04/2015" data-description="April, 1" data-count="0">
                                                         <a class="con_borderImage">
@@ -624,7 +565,6 @@
                                                         </div>
                                                     </div>
                                                 </div> 
-                                                <!-- END TIMELINE --> 
                                             </div>
                                         </div>
                                     </div>
@@ -633,10 +573,6 @@
                         </div>
                     </div>                
                 </section>
-
-                <!-- Testimonials (what people say about us) removed completely -->
-                <!-- Featured News section removed completely -->
-                <!-- Newsletter subscribe section removed completely -->
 
                 <section class="fullwidth_section no_padding_top_container dark_section">
                     <div class="container-fluid">
@@ -782,6 +718,49 @@
     <script type="text/javascript" src="js/vendor/jquery.validate.js"></script>
     <script type="text/javascript" src="js/vendor/logical.js"></script>
    
+    <!-- JS FIX: Force remove inline transform/styles applied by Revolution Slider -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Run every 100ms to catch Revolution Slider after it initializes
+        var interval = setInterval(function() {
+            var targets = document.querySelectorAll(
+                '#rev_slider_1_1 .tp-kbimg, ' +
+                '#rev_slider_1_1 .tp-kbimg-wrap, ' +
+                '#rev_slider_1_1 .slotholder, ' +
+                '#rev_slider_1_1 .tp-bgimg, ' +
+                '#rev_slider_1_1 img.defaultimg'
+            );
+            targets.forEach(function(el) {
+                if (el) {
+                    el.style.setProperty('transform', 'none', 'important');
+                    el.style.setProperty('-webkit-transform', 'none', 'important');
+                    el.style.setProperty('animation', 'none', 'important');
+                    el.style.setProperty('transition', 'none', 'important');
+                    // Also remove any inline scale attributes
+                    el.style.removeProperty('transform-origin');
+                    if (el.style.transform) el.style.transform = 'none';
+                }
+            });
+            
+            // Also find any background images within slider and reset
+            var bgImgs = document.querySelectorAll('#rev_slider_1_1 [style*="transform"]');
+            bgImgs.forEach(function(el) {
+                el.style.setProperty('transform', 'none', 'important');
+            });
+            
+            // Ensure slider container doesn't have accidental scale
+            var sliderCont = document.querySelector('#rev_slider_1_1');
+            if (sliderCont) {
+                sliderCont.style.transform = 'none';
+            }
+        }, 100);
 
+        // Stop after 10 seconds (slider is fully loaded by then)
+        setTimeout(function() {
+            clearInterval(interval);
+        }, 10000);
+    });
+    </script>
+   
 </body>
 </html>
