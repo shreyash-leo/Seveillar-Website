@@ -45,7 +45,7 @@
     </style>
 </head>
 
-<body class="home page body_style_fullscreen body_filled article_style_stretch top_panel_opacity_transparent top_panel_over user_menu_hide sidebar_hide">
+<body class="home page body_style_fullscreen body_filled article_style_stretch user_menu_hide sidebar_hide">
 
     <div class="body_wrap">
 
@@ -102,34 +102,22 @@
             </header>           
 
             <!-- HERO BANNER SECTION: ONLY 3 BANNERS - NO TEXT, NO BUTTONS, NO OVERLAYS -->
-            <section class="slider_wrap slider_fullwide slider_engine_revo slider_alias_main">
-                <div id="rev_slider_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
-                    <div id="rev_slider_1_1" class="rev_slider fullwidthabanner tp-simpleresponsive">
-                        <ul class="tp-revslider-mainul">    
-                            <!-- SLIDE 1: hero-banner1.png - pure image, no text layers -->
-                            <li data-transition="fade" data-slotamount="7" data-masterspeed="400" data-saveperformance="off" class="tp-revslider-slidesli">
-                                <div class="slotholder" data-bgposition="center top" data-bgfit="cover">
-                                    <img class="tp-bgimg defaultimg" alt="Hero Banner 1" src="images/slider/hero-banner1.png" data-src="images/slider/hero-banner1.png">
-                                </div>
-                                <!-- No text layers - completely clean banner -->
-                            </li>
-                            
-                            <!-- SLIDE 2: hero-banner2.png - pure image, no text layers -->
-                            <li data-transition="fade" data-slotamount="7" data-masterspeed="400" data-saveperformance="off" class="tp-revslider-slidesli">
-                                <div class="slotholder" data-bgposition="center top" data-bgfit="cover">
-                                    <img class="tp-bgimg defaultimg" alt="Hero Banner 2" src="images/slider/hero-banner2.png" data-src="images/slider/hero-banner2.png">
-                                </div>
-                                <!-- No text layers - completely clean banner -->
-                            </li>
-                            
-                            <!-- SLIDE 3: hero-banner3.png - pure image, no text layers -->
-                            <li data-transition="fade" data-slotamount="7" data-masterspeed="400" data-saveperformance="off" class="tp-revslider-slidesli">
-                                <div class="slotholder" data-bgposition="center top" data-bgfit="cover">
-                                    <img class="tp-bgimg defaultimg" alt="Hero Banner 3" src="images/slider/hero-banner3.png" data-src="images/slider/hero-banner3.png">
-                                </div>
-                                <!-- No text layers - completely clean banner -->
-                            </li>
-                        </ul>
+            
+            <section class="hero_slider_section">
+                <div class="hero_slider">
+                    <div class="hero_slide active">
+                        <img src="images/slider/hero-banner1.png" alt="Hero Banner 1">
+                    </div>
+                    <div class="hero_slide">
+                        <img src="images/slider/hero-banner2.png" alt="Hero Banner 2">
+                    </div>
+                    <div class="hero_slide">
+                        <img src="images/slider/hero-banner3.png" alt="Hero Banner 3">
+                    </div>
+                    <div class="hero_slider_dots">
+                        <span class="hero_dot active" data-index="0"></span>
+                        <span class="hero_dot" data-index="1"></span>
+                        <span class="hero_dot" data-index="2"></span>
                     </div>
                 </div>
             </section>
@@ -761,6 +749,40 @@
         }, 10000);
     });
     </script>
+
+    <!-- Hero Slider Script -->
+<script>
+(function() {
+    var slides = document.querySelectorAll('.hero_slide');
+    var dots = document.querySelectorAll('.hero_dot');
+    var current = 0;
+    var total = slides.length;
+    var timer;
+
+    function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + total) % total;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+
+    function next() { goTo(current + 1); }
+
+    function startAuto() { timer = setInterval(next, 4000); }
+    function stopAuto() { clearInterval(timer); }
+
+    dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+            stopAuto();
+            goTo(parseInt(this.getAttribute('data-index')));
+            startAuto();
+        });
+    });
+
+    startAuto();
+})();
+</script>
    
 </body>
 </html>
