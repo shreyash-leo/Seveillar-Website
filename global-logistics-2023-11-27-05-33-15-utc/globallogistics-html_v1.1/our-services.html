@@ -320,34 +320,57 @@
             padding: 0 15px;
         }
         
-        /* Company promise section - original styling */
-        .parallax_section {
-            margin: 50px 0 0;
+        /* Company promise section - original styling (updated to match new markup) */
+        .promise_section {
+            width: 100%;
+            background: url('images/news/1800x1125.png') center center/cover no-repeat;
+            margin-top: 40px;
         }
         
-        .sc_parallax_overlay {
-            padding: 70px 20px;
+        .promise_overlay {
             background: rgba(26,43,76,0.92);
+            padding: 85px 20px;
             text-align: center;
         }
         
-        .sc_parallax_overlay h2 {
-            color: #fff;
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 18px;
-            letter-spacing: -0.3px;
+        .promise_content {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .sc_parallax_overlay p {
+        .promise_eyebrow {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #e9a83b;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        .promise_title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        
+        .promise_divider {
+            width: 60px;
+            height: 3px;
+            background: #e9a83b;
+            margin: 0 auto 25px auto;
+        }
+        
+        .promise_text {
+            font-size: 18px;
+            line-height: 1.6;
             color: rgba(255,255,255,0.85);
-            font-size: 17px;
             max-width: 700px;
             margin: 0 auto;
-            line-height: 1.6;
         }
         
-        /* Clients section - original */
+        /* Clients section placeholder adjustment - maintain layout */
         .clients_section {
             padding: 50px 0;
         }
@@ -398,45 +421,14 @@
     </style>
     <link rel="stylesheet" id="responsive-style-css" href="css/responsive.css" type="text/css" media="all">
 </head>
+<body class="page body_style_wide body_filled article_style_stretch user_menu_hide sidebar_hide">
 
-<body class="page body_style_wide body_filled article_style_stretch top_panel_opacity_transparent top_panel_show top_panel_above top_panel_over user_menu_hide sidebar_hide fixed_top_menu top_image_show"> 
+    <div id="navbar"></div>
+
+    <script src="js/include.js"></script>
 
     <div class="body_wrap">
         <div class="page_wrap">
-
-            <div class="top_panel_fixed_wrap"></div>
-            <header class="top_panel_wrap">
-                <div class="menu_main_wrap logo_left menu_show">
-                    <div class="container">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="images/icon/157x54.png" class="logo_main" alt="Seveillar Clinical Supplies Logo">
-                                <span class="logo_info"></span>
-                            </a>
-                        </div>
-                        <div class="menu_main">
-                            <nav class="menu_main_nav_area">
-                                <ul id="menu_main" class="menu_main_nav">
-                                    <li class="menu-item menu-item-has-children">
-                                        <a href="index.html" class="sf-with-ul">Home</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="index.html">Homepage Default</a></li>
-                                            <li class="menu-item"><a href="homepage-optional.html">Homepage Optional</a></li>
-                                            <li class="menu-item"><a href="homepage-creative.html">Homepage Creative</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item current-menu-item current_page_item"><a href="our-services.html">Our services</a></li>
-                                    <li class="menu-item"><a href="about-us.html">About Us</a></li>
-                                    <li class="menu-item"><a href="facility-infrastructure.html">Facility & Infrastructure</a></li>
-                                    <li class="menu-item"><a href="why-us.html">Why Us</a></li>
-                                    <li class="menu-item"><a href="contacts.html">Contact Us</a></li>
-                                </ul>
-                            </nav>
-                            <a href="#" class="menu_main_responsive_button icon-menu"></a>
-                        </div>
-                    </div>
-                </div>
-            </header>           
 
             <section class="top_panel_image top_panel_bg1">
                 <div class="top_panel_image_hover"></div>
@@ -646,25 +638,27 @@
             </div>
             
             <!-- COMPANY PROMISE SECTION -->
-<section class="promise_section">
-    <div class="promise_overlay">
-        <div class="promise_content">
-            <p class="promise_eyebrow">Our Commitment</p>
-            <h2 class="promise_title">The Company Promise</h2>
-            <div class="promise_divider"></div>
-            <p class="promise_text">At Seveillar Clinical Supplies Services, we are committed to delivering reliable, compliant, and patient-focused clinical supply solutions that support successful clinical trials across global regions.</p>
-        </div>
-    </div>
-</section>
+            <section class="promise_section">
+                <div class="promise_overlay">
+                    <div class="promise_content">
+                        <p class="promise_eyebrow">Our Commitment</p>
+                        <h2 class="promise_title">The Company Promise</h2>
+                        <div class="promise_divider"></div>
+                        <p class="promise_text">At Seveillar Clinical Supplies Services, we are committed to delivering reliable, compliant, and patient-focused clinical supply solutions that support successful clinical trials across global regions.</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
+    <!-- All JavaScript dependencies loaded at the bottom for optimal performance -->
     <script type="text/javascript" src="js/vendor/jquery.js"></script>
     <script type="text/javascript" src="js/vendor/jquery-migrate.min.js"></script>
     <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/_packed.js"></script>
     <script type="text/javascript" src="js/shortcodes.min.js"></script>
     <script type="text/javascript" src="js/_main.js"></script>
+
     <script>    
         // Smooth scroll to detailed sections and back to top functionality
         document.querySelectorAll('a[href^="#service"]').forEach(anchor => {
@@ -676,10 +670,13 @@
                 }
             });
         });
-        document.getElementById('backToTopBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        var backBtn = document.getElementById('backToTopBtn');
+        if(backBtn) {
+            backBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
     </script>
 </body>
 </html>

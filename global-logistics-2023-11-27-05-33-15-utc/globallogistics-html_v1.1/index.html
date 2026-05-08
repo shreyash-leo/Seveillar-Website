@@ -42,65 +42,38 @@
             overflow: hidden;
             max-height: 80vh;
         }
+        
+        /* Ensure body starts from top without any offset */
+        body {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        .body_wrap,
+        .page_wrap {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        /* Remove any fixed menu spacing */
+        .fixed_top_menu .page_wrap {
+            padding-top: 0 !important;
+        }
     </style>
 </head>
 
-<body class="home page body_style_fullscreen body_filled article_style_stretch user_menu_hide sidebar_hide">
+<body class="page body_style_wide body_filled article_style_stretch user_menu_hide sidebar_hide">
+
+    <div id="navbar"></div>
+
+    <script src="js/include.js"></script>
 
     <div class="body_wrap">
 
         <div class="page_wrap">
 
-            <div class="top_panel_fixed_wrap"></div>
-            <header class="top_panel_wrap">
-                <div class="menu_main_wrap logo_left menu_show">
-                    <div class="container">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="images/icon/logo.png" class="logo_main" alt="">
-                                <span class="logo_info"></span>
-                            </a>
-                        </div>
-                        <div class="menu_main">
-                            <nav class="menu_main_nav_area">
-                                <ul id="menu_main" class="menu_main_nav">
-                                    <li class="menu-item current-menu-item current-menu-parent menu-item-has-children">
-                                        <a href="index.html" class="sf-with-ul">Home</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item current-menu-item current_page_item">
-                                                <a href="index.html">Homepage Default</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="homepage-optional.html">Homepage Optional</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="homepage-creative.html">Homepage Creative</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="our-services.html">Our services</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="about-us.html">About Us</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="facility-infrastructure.html">Facility & Infrastructure</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="why-us.html">Why Us</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="contacts.html">Contact Us</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <a href="#" class="menu_main_responsive_button icon-menu"></a>
-                        </div>
-                    </div>
-                </div>
-            </header>           
-
+            <!-- NAVBAR COMPLETELY REMOVED - NO nav, NO top_panel, NO header elements -->
+            
             <!-- HERO BANNER SECTION: ONLY 3 BANNERS - NO TEXT, NO BUTTONS, NO OVERLAYS -->
             
             <section class="hero_slider_section">
