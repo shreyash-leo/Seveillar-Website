@@ -208,9 +208,12 @@
 
 /* Logo image */
 .menu_main_wrap .logo img {
-    max-height: 300px !important;
+    max-height: 60px !important;
     width: auto !important;
-    display: block;
+    display: block !important;
+
+    transform: scale(1.35) !important;
+    transform-origin: center center !important;
 }
 
 /* Navigation area */
@@ -405,3 +408,7 @@
 
 }
 
+/* Shift navbar content slightly to right */
+.menu_main_wrap .container {
+    padding-left: 100px !important;
+}
