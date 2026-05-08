@@ -17,17 +17,6 @@
     <style id="custom-style-inline-css" type="text/css"></style>
     <link rel="stylesheet" id="responsive-style-css" href="css/responsive.css" type="text/css" media="all">
     <style>
-        /* Additional styling for header consistency */
-        .top_panel_wrap .menu_main_nav > li > a {
-            font-weight: 500;
-        }
-        .menu_main_wrap .logo img.logo_main {
-            max-height: 54px;
-            width: auto;
-        }
-        .menu_main_nav_area .menu_main_nav .sub-menu {
-            z-index: 1000;
-        }
         /* custom why us refinement */
         .benefit-icon-list li {
             margin-bottom: 18px;
@@ -97,14 +86,17 @@
         }
     </style>
 </head>
-<script src="js/include.js"></script>
-<body class="page body_style_wide body_filled article_style_stretch top_panel_opacity_solid top_panel_show top_panel_above user_menu_hide sidebar_hide fixed_top_menu">
+<body class="page body_style_wide body_filled article_style_stretch user_menu_hide sidebar_hide">
+
+    <div id="navbar"></div>
+
+    <script src="js/include.js"></script>
 
     <div class="body_wrap">
         <div class="page_wrap">
 
             <div class="top_panel_fixed_wrap"></div>
-            <div id="navbar"></div>
+            
 
             <!-- PAGE TOP WRAPPER for Why Us -->
             <div class="page_top_wrap page_top_title page_top_breadcrumbs">

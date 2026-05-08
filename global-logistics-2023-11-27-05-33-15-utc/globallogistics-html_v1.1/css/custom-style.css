@@ -242,12 +242,19 @@
 /* Actual nav links */
 .menu_main_wrap .menu_main > li > a {
     height: 78px !important;
+
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 0 18px !important;
-    line-height: normal !important;
+
+    padding: 2px 18px 0 18px !important;
+
+    line-height: 78px !important;
+
     margin: 0 !important;
+
+    position: relative !important;
+    top: 1px !important;
 }
 
 /* Remove hidden spacing from theme */

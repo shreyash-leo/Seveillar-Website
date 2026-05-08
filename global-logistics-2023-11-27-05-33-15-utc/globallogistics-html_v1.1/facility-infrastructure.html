@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Seveillar Clinical Supplies – State-of-the-art Facility & Infrastructure for IMP labelling, packaging, storage and distribution. QP certified, USFDA audited.">
+    <link rel="icon" type="image/x-icon" href="images/icon/favicon.ico">
+    <title>Seveillar | Facility & Infrastructure – Clinical Trial Supply Excellence</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" id="packed-css" href="css/_packed.css" type="text/css" media="all">
+    <link rel="stylesheet" id="fontello-style-css" href="css/fontello.css" type="text/css" media="all">
+    <link rel="stylesheet" id="main-style-css" href="css/main_style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="custom-style-css" href="css/custom-style.css" type="text/css" media="all">
+    <style id="custom-style-inline-css" type="text/css">
+        /* facility & infrastructure - clean, minimal, edgy aesthetic - proper alignment */
+        .facility-hero {
+            background-image: url('images/uploads/facility-header.jpg');
+            background-size: cover;
+            background-position: center 30%;
+        }
+        .facility-stat-card {
+            background: #fff;
+            padding: 28px 15px;
+            text-align: center;
+            border-bottom: 2px solid #e8841a;
+            margin-bottom: 30px;
+        }
+        .stat-number-lg {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1a3e6f;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #5a6e8a;
+            letter-spacing: 0.3px;
+        }
+        .infra-grid .sc_column_item {
+            padding: 28px 20px;
+            margin-bottom: 30px;
+            border-left: 2px solid #e8841a;
+            background: transparent;
+            height: 100%;
+        }
+        .infra-icon {
+            font-size: 42px;
+            color: #e8841a;
+            margin-bottom: 18px;
+            display: inline-block;
+        }
+        .section-subhead {
+            font-size: 16px;
+            color: #4a627a;
+            margin-bottom: 45px;
+            text-align: center;
+            max-width: 780px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        .cert-badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin: 35px 0 20px;
+        }
+        .cert-badge {
+            background: rgba(255,255,255,0.08);
+            border-radius: 0;
+            padding: 10px 24px;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .cert-badge i {
+            margin-right: 8px;
+            color: #e8841a;
+        }
+        .gallery-img-box {
+            margin-bottom: 30px;
+            background: #f5f7fa;
+        }
+        .gallery-img-box img {
+            width: 100%;
+            display: block;
+        }
+        .caption-overlay {
+            padding: 14px 0 6px;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            color: #2c3e55;
+            letter-spacing: 0.3px;
+        }
+        /* minimal headings - consistent spacing */
+        .sc_title.sc_title_regular {
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            margin-bottom: 15px;
+        }
+        .dark_section .sc_title.sc_title_regular {
+            color: #ffffff;
+        }
+        .btn-edgy {
+            border-radius: 0;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .sc_button {
+            border-radius: 0;
+        }
+        /* clean service boxes - proper left border alignment */
+        .forwarding_section .sc_column_item {
+            border-left: 2px solid #e8841a;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        .forwarding_section .sc_column_item p {
+            margin-bottom: 20px;
+        }
+        /* row spacing fixes */
+        .fullwidth_section {
+            padding: 60px 0;
+        }
+        .no_padding_container {
+            padding: 0;
+        }
+        .sc_content.container {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        /* ensure consistent container spacing */
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        /* fix column gutters */
+        .columns_wrap {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .sc_column_item {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 30px;
+        }
+        /* facility stats row fix */
+        .facility-stat-grid .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        /* gallery row spacing */
+        .feature-gallery .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        @media (max-width: 768px) {
+            .fullwidth_section {
+                padding: 40px 0;
+            }
+            .facility-stat-card { 
+                padding: 20px 10px; 
+                margin-bottom: 20px;
+            }
+            .stat-number-lg { 
+                font-size: 32px; 
+            }
+            .infra-grid .sc_column_item { 
+                border-left: none; 
+                border-top: 2px solid #e8841a; 
+                padding-top: 24px;
+                margin-bottom: 25px;
+            }
+            .forwarding_section .sc_column_item {
+                border-left: none;
+                border-top: 2px solid #e8841a;
+                padding-top: 20px;
+                margin-bottom: 25px;
+            }
+            .cert-badge-list {
+                gap: 12px;
+            }
+            .cert-badge {
+                padding: 6px 16px;
+                font-size: 12px;
+            }
+        }
+        /* remove all hover scaling/transform effects */
+        .facility-stat-card:hover, 
+        .infra-grid .sc_column_item:hover, 
+        .gallery-img-box:hover img,
+        .sc_button:hover,
+        .forwarding_section .sc_column_item:hover {
+            transform: none;
+        }
+        /* ensure text alignment consistency */
+        .sc_align_center {
+            text-align: center;
+        }
+        .aligncenter {
+            text-align: center;
+        }
+        /* fix dark section text */
+        .dark_section p, 
+        .dark_section .sc_title {
+            color: #fff;
+        }
+        /* spacing for hero section */
+        .top_panel_image {
+            margin-bottom: 0;
+        }
+        .page_content > section:first-child {
+            margin-top: 0;
+        }
+    </style>
+    <link rel="stylesheet" id="responsive-style-css" href="css/responsive.css" type="text/css" media="all">
+</head>
+<body class="page body_style_wide body_filled article_style_stretch user_menu_hide sidebar_hide">
+
+    <div id="navbar"></div>
+    <script src="js/include.js"></script>
+
+    <div class="body_wrap">
+        <div class="page_wrap">
+
+            <div class="top_panel_fixed_wrap"></div>
+
+            <!-- Hero Banner: same as about us / contact style -->
+            <section class="top_panel_image top_panel_bg4 facility-hero">
+                <div class="top_panel_image_hover"></div>
+                <div class="top_panel_image_header">
+                    <h1 class="top_panel_image_title entry-title">Facility & Infrastructure</h1>
+                    <div class="breadcrumbs">
+                        <span class="breadcrumbs_item_first">You Are Here:</span>
+                        <a class="breadcrumbs_item home" href="index.html">Home</a>
+                        <span class="breadcrumbs_delimiter"></span>
+                        <span class="breadcrumbs_item current">Facility & Infrastructure</span>                     
+                    </div>
+                </div>
+            </section>
+
+            <div class="page_content">
+
+                <!-- INTRO SECTION: forwarding_section style -->
+                <section class="fullwidth_section forwarding_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sc_section">
+                                    <div class="sc_content container">
+                                        <div class="columns_wrap">
+                                            <div class="col-md-12 sc_column_item text-center" style="margin-bottom: 20px; border-left: none;">
+                                                <h2 class="sc_title sc_title_regular">Clinical Supply Hub — Engineered for Precision</h2>
+                                                <p style="font-size: 16px; max-width: 800px; margin: 10px auto 0 auto;">Seveillar's infrastructure is built to meet global regulatory benchmarks. From IMP labelling to worldwide distribution, every square foot reflects GMP compliance and operational integrity.</p>
+                                            </div>
+                                        </div>
+                                        <!-- four core pillars -->
+                                        <div class="columns_wrap">
+                                            <div class="col-md-3 col-sm-6 col-xs-6 sc_column_item">
+                                                <h4 class="sc_title sc_title_regular">ISO & GMP</h4>
+                                                <h4 class="sc_title sc_title_regular">Certified Areas</h4>
+                                                <p>Cleanrooms and segregated zones for aseptic handling, labelling, and packaging of Investigational Medicinal Products.</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-6 sc_column_item">
+                                                <h4 class="sc_title sc_title_regular">Temp-Controlled</h4>
+                                                <h4 class="sc_title sc_title_regular">Storage</h4>
+                                                <p>Ambient, 2–8°C, -20°C, and -80°c capacities with 24/7 monitoring and redundant backup systems.</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-6 sc_column_item">
+                                                <h4 class="sc_title sc_title_regular">High-Speed</h4>
+                                                <h4 class="sc_title sc_title_regular">Labelling Lines</h4>
+                                                <p>Automated serialization and multi‑language label application for global clinical trials.</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-6 sc_column_item">
+                                                <h4 class="sc_title sc_title_regular">Qualified Person</h4>
+                                                <h4 class="sc_title sc_title_regular">Release (EU)</h4>
+                                                <p>QP-certified facility enabling batch certification for European clinical trials under EU GMP.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Facility at a Glance (clean stats) -->
+                <section class="fullwidth_section light_section counter_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sc_section">
+                                    <div class="sc_content container">
+                                        <h2 class="sc_title sc_title_regular sc_align_center">Facility at a Glance</h2>
+                                        <div class="section-subhead">Built to support phase I–III and global supply chains with uncompromised quality.</div>
+                                        <div class="row facility-stat-grid">
+                                            <div class="col-md-3 col-sm-6 col-xs-6">
+                                                <div class="facility-stat-card">
+                                                    <div class="stat-number-lg">45,000+</div>
+                                                    <div class="stat-label">sq. ft. built-up area</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-6">
+                                                <div class="facility-stat-card">
+                                                    <div class="stat-number-lg">12+</div>
+                                                    <div class="stat-label">Controlled temp zones</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-6">
+                                                <div class="facility-stat-card">
+                                                    <div class="stat-number-lg">100%</div>
+                                                    <div class="stat-label">Redundant power & HVAC</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-6">
+                                                <div class="facility-stat-card">
+                                                    <div class="stat-number-lg">5,000+</div>
+                                                    <div class="stat-label">Pallet positions (all ranges)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Infrastructure Features (clean, edgy left-border style) -->
+                <section class="fullwidth_section light_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sc_section">
+                                    <div class="sc_content container">
+                                        <h2 class="sc_title sc_title_regular sc_align_center">Designed for Clinical Supply Excellence</h2>
+                                        <div class="section-subhead">Purpose‑built environment ensuring material integrity, security and regulatory adherence.</div>
+                                        <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_3 infra-grid">
+                                            <div class="col-md-4 sc_column_item">
+                                                <div class="infra-icon"><span class="icon-lock-2"></span></div>
+                                                <h4 class="sc_title sc_title_regular">Secure Segregated Zones</h4>
+                                                <p>Dedicated areas for receipt, quarantine, labelling, packaging and finished goods with access control & CCTV.</p>
+                                            </div>
+                                            <div class="col-md-4 sc_column_item">
+                                                <div class="infra-icon"><span class="icon-monitor"></span></div>
+                                                <h4 class="sc_title sc_title_regular">24/7 Monitoring & Alarms</h4>
+                                                <p>Real‑time temperature, humidity and pressure monitoring with automated deviation alerts.</p>
+                                            </div>
+                                            <div class="col-md-4 sc_column_item">
+                                                <div class="infra-icon"><span class="icon-cargo"></span></div>
+                                                <h4 class="sc_title sc_title_regular">Cold Chain Logistics Hub</h4>
+                                                <p>Validated freezers, refrigerators and thermal shippers for global cold chain shipments.</p>
+                                            </div>
+                                            <div class="col-md-4 sc_column_item">
+                                                <div class="infra-icon"><span class="icon-tag"></span></div>
+                                                <h4 class="sc_title sc_title_regular">High-Speed Serialization</h4>
+                                                <p>Automated labelling with barcode/QR and aggregation, compliant with EU FMD / DSCSA.</p>
+                                            </div>
+                                            <div class="col-md-4 sc_column_item">
+                                                <div class="infra-icon"><span class="icon-doc"></span></div>
+                                                <h4 class="sc_title sc_title_regular">QA Suite & QP Release</h4>
+                                                <p>On‑site quality assurance, batch record review and Qualified Person release for Europe.</p>
+                                            </div>
+                                            <div class="col-md-4 sc_column_item">
+                                                <div class="infra-icon"><span class="icon-truck-2"></span></div>
+                                                <h4 class="sc_title sc_title_regular">Dispatch & Logistics Zone</h4>
+                                                <p>Dedicated dispatch bay for temperature‑controlled freight and global logistics integration.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Certifications & Compliance (clean dark section, no hover effects) -->
+                <section class="fullwidth_section dark_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sc_section">
+                                    <div class="sc_section_overlay">
+                                        <div class="sc_section_content">
+                                            <div class="sc_content container">
+                                                <h2 class="sc_title sc_title_regular sc_align_center">Regulatory Compliance & Certifications</h2>
+                                                <p class="sc_align_center" style="color: rgba(255,255,255,0.85); margin-bottom: 30px;">Audited and certified by global regulatory bodies — full alignment with clinical trial supply standards.</p>
+                                                <div class="cert-badge-list">
+                                                    <span class="cert-badge"><i class="icon-ok"></i> QP Certified (EU GMP)</span>
+                                                    <span class="cert-badge"><i class="icon-ok"></i> USFDA Audited</span>
+                                                    <span class="cert-badge"><i class="icon-ok"></i> WHO-GDP Compliant</span>
+                                                    <span class="cert-badge"><i class="icon-ok"></i> ISO 9001:2015</span>
+                                                    <span class="cert-badge"><i class="icon-ok"></i> ISO 13485</span>
+                                                </div>
+                                                <div class="cert-badge-list" style="margin-top: 0;">
+                                                    <span class="cert-badge"><i class="icon-ok"></i> EU Annex 16 (QP)</span>
+                                                    <span class="cert-badge"><i class="icon-ok"></i> CDSCO Approved</span>
+                                                    <span class="cert-badge"><i class="icon-ok"></i> Qualified Person on‑site</span>
+                                                </div>
+                                                <div class="sc_section aligncenter" style="margin-top: 40px;">
+                                                    <a href="contacts.html" class="sc_button sc_button_square sc_button_bg_light btn-edgy">Request Facility Audit Report</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Facility Gallery section (minimal, no hover zoom) -->
+                <section class="fullwidth_section grey_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sc_section">
+                                    <div class="sc_content container">
+                                        <h2 class="sc_title sc_title_regular sc_align_center">Behind the Scenes: Facility Tour</h2>
+                                        <div class="section-subhead">Key areas of our clinical supply centre — built for safety and scale.</div>
+                                        <div class="row feature-gallery">
+                                            <div class="col-sm-4">
+                                                <div class="gallery-img-box">
+                                                    <img src="images/uploads/facility-labelling-line.jpg" alt="IMP labelling line" onerror="this.src='images/news/750x442.png'">
+                                                    <div class="caption-overlay">Automated Labelling & Serialization</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="gallery-img-box">
+                                                    <img src="images/uploads/facility-cold-storage.jpg" alt="Cold storage" onerror="this.src='images/news/750x442.png'">
+                                                    <div class="caption-overlay">2-8°C & -20°C Storage Vaults</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="gallery-img-box">
+                                                    <img src="images/uploads/facility-qa-lab.jpg" alt="QA lab" onerror="this.src='images/news/750x442.png'">
+                                                    <div class="caption-overlay">Quality Assurance & QP Release Area</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row feature-gallery">
+                                            <div class="col-sm-4">
+                                                <div class="gallery-img-box">
+                                                    <img src="images/uploads/facility-warehouse.jpg" alt="Ambient warehouse" onerror="this.src='images/news/750x442.png'">
+                                                    <div class="caption-overlay">GMP Ambient Warehouse (15-25°C)</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="gallery-img-box">
+                                                    <img src="images/uploads/facility-dispatch.jpg" alt="Dispatch zone" onerror="this.src='images/news/750x442.png'">
+                                                    <div class="caption-overlay">Cold Chain Dispatch & Logistics Hub</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="gallery-img-box">
+                                                    <img src="images/uploads/facility-cleanroom.jpg" alt="Cleanroom" onerror="this.src='images/news/750x442.png'">
+                                                    <div class="caption-overlay">ISO 7 Cleanroom for Aseptic Ops</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sc_section aligncenter" style="margin: 25px 0 10px;">
+                                            <p style="color:#6c7f8f;">*On‑site visits can be arranged under confidentiality agreement.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section - minimal and direct -->
+                <section class="fullwidth_section dark_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sc_section">
+                                    <div class="sc_section_overlay">
+                                        <div class="sc_section_content">
+                                            <div class="sc_content container aligncenter">
+                                                <h3 class="sc_title sc_title_regular" style="color:#ffffff; margin-bottom: 15px;">See Our Infrastructure in Action</h3>
+                                                <p style="color:#ddd; max-width: 600px; margin: 0 auto 25px;">Qualified partners, sponsors and auditors — schedule a virtual or physical tour.</p>
+                                                <a href="contacts.html" class="sc_button sc_button_square sc_button_bg_light sc_button_iconed btn-edgy">
+                                                    Request a Facility Tour
+                                                    <span class="sc_button_iconed icon-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technical highlights (clean 3-col layout) -->
+                <section class="fullwidth_section light_section">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="sc_section">
+                                    <div class="sc_content container">
+                                        <h2 class="sc_title sc_title_regular sc_align_center">Technical & Operational Highlights</h2>
+                                        <div class="section-subhead" style="margin-bottom: 30px;">Engineering excellence and quality-driven processes power every step of clinical supply.</div>
+                                        <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_3">
+                                            <div class="col-md-4 sc_column_item">
+                                                <h5 class="sc_title sc_title_regular"><i class="icon-ok-circled" style="color:#e8841a; margin-right: 8px;"></i> Redundant HVAC Systems</h5>
+                                                <p>N+1 redundancy for critical areas ensures continuous environmental control.</p>
+                                            </div>
+                                            <div class="col-md-4 sc_column_item">
+                                                <h5 class="sc_title sc_title_regular"><i class="icon-ok-circled" style="color:#e8841a; margin-right: 8px;"></i> Advanced BMS</h5>
+                                                <p>Centralized digital interface tracks environmental parameters, access logs.</p>
+                                            </div>
+                                            <div class="col-md-4 sc_column_item">
+                                                <h5 class="sc_title sc_title_regular"><i class="icon-ok-circled" style="color:#e8841a; margin-right: 8px;"></i> Validated Shipping Processes</h5>
+                                                <p>Thermal mapping and packaging qualification for global lanes.</p>
+                                            </div>
+                                            <div class="col-md-4 sc_column_item">
+                                                <h5 class="sc_title sc_title_regular"><i class="icon-ok-circled" style="color:#e8841a; margin-right: 8px;"></i> Material Segregation</h5>
+                                                <p>Dedicated zones for IMP, comparator, ancillary supplies, devices.</p>
+                                            </div>
+                                            <div class="col-md-4 sc_column_item">
+                                                <h5 class="sc_title sc_title_regular"><i class="icon-ok-circled" style="color:#e8841a; margin-right: 8px;"></i> Integrated Inventory Mgmt</h5>
+                                                <p>ERP tracking, expiry management, real‑time sponsor visibility.</p>
+                                            </div>                                            
+                                            <div class="col-md-4 sc_column_item">
+                                                <h5 class="sc_title sc_title_regular"><i class="icon-ok-circled" style="color:#e8841a; margin-right: 8px;"></i> Fully Documented Validation</h5>
+                                                <p>Complete IQ/OQ/PQ protocols for equipment & facility utilities.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>               
+            </div>
+
+            <!-- Footer: identical to Seveillar style -->
+            <footer class="footer_wrap bg_tint_dark footer_style_dark widget_area">
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-md-3 col-sm-6 widget widget_socials">
+                            <div class="widget_inner">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="images/icon/157x54.png" alt="Seveillar">                              
+                                        <span class="logo_info">Clinical Supplies</span>
+                                    </a>
+                                </div>
+                                <div class="logo_descr">Seveillar Clinical Supplies Services Pvt. Ltd. provides end-to-end clinical trial supply chain management, packaging, labeling, and logistics solutions across India and globally.</div>
+                                <div class="sc_socials sc_socials_size_small">
+                                    <div class="sc_socials_item"><a href="#" target="_blank" class="social_icons social_linkedin icons"><span class="icon-linkedin"></span><span class="sc_socials_hover icon-linkedin"></span></a></div>
+                                    <div class="sc_socials_item"><a href="mailto:enquiry@seveillar.com" class="social_icons social_mail icons"><span class="icon-mail-alt"></span><span class="sc_socials_hover icon-mail-alt"></span></a></div>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside class="col-md-3 col-sm-6 widget widget_text">
+                            <h5 class="widget_title">Contact Info</h5>          
+                            <div class="textwidget">
+                                <div class="sc_section">
+                                    <b>Seveillar Clinical Supplies Services Pvt. Ltd.</b>
+                                    <br>Plot D-219, Ranjangaon MIDC,
+                                    <br>Pune - 412 220, Maharashtra, India.
+                                </div>
+                                <div class="sc_section" style="margin-top: 12px;">
+                                    <span class="icon-phone"></span> Tel: +91 2138 664021
+                                    <br><span class="icon-mail-alt"></span> Email: <a href="mailto:enquiry@seveillar.com">enquiry@seveillar.com</a>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside class="col-md-3 col-sm-6 widget widget_recent_reviews">
+                            <h5 class="widget_title">Our Expertise</h5>
+                            <div class="recent_reviews">
+                                <ul class="menu" style="list-style: none; padding-left:0;">
+                                    <li><a href="our-services.html">→ IMP Labelling & Packaging</a></li>
+                                    <li><a href="our-services.html">→ Clinical Supply Storage</a></li>
+                                    <li><a href="facility-infrastructure.html">→ QP & USFDA Facilities</a></li>
+                                    <li><a href="why-us.html">→ Global Distribution Network</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <aside class="col-md-3 col-sm-6 widget widget_nav_menu">
+                            <h5 class="widget_title">Quick Links</h5>
+                            <div class="menu-categories-container">
+                                <ul id="menu-categories" class="menu">
+                                    <li class="menu-item"><a href="about-us.html">About Us</a></li>
+                                    <li class="menu-item"><a href="facility-infrastructure.html">Facility & Infrastructure</a></li>
+                                    <li class="menu-item"><a href="why-us.html">Why Choose Seveillar</a></li>
+                                    <li class="menu-item"><a href="contacts.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </footer>
+
+            <section class="copyright_wrap fullwidth_section dark_section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="container">
+                                <p>Seveillar Clinical Supplies Services Pvt. Ltd. © 2025 All Rights Reserved. 
+                                    <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="preloader" style="display:none;">
+        <div class="preloader_image"></div>
+    </div>
+
+    <script type="text/javascript" src="js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/_packed.js"></script>
+    <script type="text/javascript" src="js/shortcodes.min.js"></script>
+    <script type="text/javascript" src="js/_main.js"></script>
+    
+    <script>
+        (function(){
+            var imgs = document.querySelectorAll('img[src*="facility-"], img[src*="uploads/"]');
+            for(var i=0;i<imgs.length;i++){
+                imgs[i].onerror = function(){
+                    if(this.src.indexOf('750x442')===-1) this.src = 'images/news/750x442.png';
+                };
+            }
+        })();
+    </script>
+</body>
+</html>
