@@ -313,3 +313,28 @@
         min-height: 260px;
     }
 }
+
+/* ===== CONTACT MAP ===== */
+
+.contact_map_wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact_map_wrapper iframe {
+    width: 100%;
+    height: 520px;
+    border: 0;
+    display: block;
+    filter: grayscale(15%);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .contact_map_wrapper iframe {
+        height: 350px;
+    }
+
+}
