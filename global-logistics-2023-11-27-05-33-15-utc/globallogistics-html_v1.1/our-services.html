@@ -8,73 +8,428 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="icon" type="image/x-icon" href="images/icon/favicon.ico">
-    <title>Global Logistics | Our Services - Freight & Supply Chain Solutions</title>
+    <title>Seveillar | Clinical Supply Services - Comprehensive Clinical Trial Solutions</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" id="packed-css" href="css/_packed.css" type="text/css" media="all">
     <link rel="stylesheet" id="fontello-style-css" href="css/fontello.css" type="text/css" media="all">
     <link rel="stylesheet" id="main-style-css" href="css/main_style.css" type="text/css" media="all">
     <link rel="stylesheet" id="custom-style-css" href="css/custom-style.css" type="text/css" media="all">
-    <style id="custom-style-inline-css" type="text/css"></style>
+    <style id="custom-style-inline-css" type="text/css">
+        /* ===== PROFESSIONAL DESIGN - EDGY CORNERS, NO HOVER EFFECTS ON BOTTOM INFO, PROPER ALIGNMENT ===== */
+        
+        /* Restore original edgy corners (no border-radius) */
+        .post_item,
+        .post_featured,
+        .post_thumb,
+        .hover_wrap,
+        .service-detail-card,
+        .sc_button,
+        .temp-badge,
+        .back-to-services {
+            border-radius: 0 !important;
+        }
+        
+        /* Fix grid alignment - ensure all 6 cards properly aligned in sequence */
+        .columns_wrap {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .columns_wrap > [class*="column_item"] {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            padding: 0 15px;
+            margin-bottom: 40px;
+        }
+        
+        /* Original card styling - no rounded corners, clean edges */
+        .post_item {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border: 1px solid #eef2f7;
+        }
+        
+        /* No transform hover on cards - keep as original style */
+        .post_item:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Image area styling - sharp edges */
+        .post_featured {
+            position: relative;
+            overflow: hidden;
+            background: #f5f7fc;
+        }
+        
+        .post_thumb {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .post_thumb img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Hover overlay - keep as per original */
+        .hover_wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26,43,76,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .post_item:hover .hover_wrap {
+            opacity: 1;
+        }
+        
+        .link_wrap {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .hover_link, .hover_view {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: #e9a83b;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+            transform: scale(0.9);
+        }
+        
+        .post_item:hover .hover_link,
+        .post_item:hover .hover_view {
+            transform: scale(1);
+        }
+        
+        .hover_link:hover, .hover_view:hover {
+            background: #fff;
+            color: #e9a83b;
+        }
+        
+        /* Content area - original spacing */
+        .post_title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 20px 20px 12px;
+            color: #1a2b4c;
+        }
+        
+        .post_content {
+            padding: 0 20px 24px;
+            flex-grow: 1;
+        }
+        
+        .post_descr p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #5a6e8a;
+            margin-bottom: 20px;
+        }
+        
+        /* Learn more button - original underline style */
+        .sc_button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #e9a83b;
+            text-decoration: none;
+            transition: all 0.2s;
+            background: transparent;
+            border: none;
+            padding: 0;
+            letter-spacing: 0.5px;
+        }
+        
+        .sc_button:hover {
+            color: #1a2b4c;
+            gap: 10px;
+            text-decoration: none;
+        }
+        
+        .sc_button_iconed .icon-right {
+            transition: transform 0.2s;
+            font-size: 12px;
+        }
+        
+        /* Detailed service section - edgy corners, no hover effects on bottom info */
+        .service-details-wrapper {
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .service-detail-card {
+            background: #ffffff;
+            padding: 35px;
+            margin-bottom: 35px;
+            border: 1px solid #eef2f7;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            transition: none;
+        }
+        
+        /* NO hover effect on detail cards - maintain original static style */
+        .service-detail-card:hover {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            transform: none;
+            border-color: #eef2f7;
+        }
+        
+        .service-detail-card h3 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1a2b4c;
+            border-left: 4px solid #e9a83b;
+            padding-left: 20px;
+        }
+        
+        .service-detail-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 28px 0 14px 0;
+            color: #2c3e66;
+        }
+        
+        .service-detail-card p {
+            line-height: 1.65;
+            color: #4a5a7a;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+        
+        .highlight-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 15px 0;
+        }
+        
+        .highlight-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            line-height: 1.55;
+            color: #4a5a7a;
+            font-size: 14px;
+        }
+        
+        .highlight-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #e9a83b;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .temp-badge {
+            display: inline-block;
+            background: #f4f6f9;
+            padding: 5px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            margin: 5px 6px 0 0;
+            color: #2c3e66;
+            letter-spacing: 0.3px;
+            border: 1px solid #e8ecf1;
+        }
+        
+        .back-to-services {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 30px;
+            color: #e9a83b;
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s;
+            letter-spacing: 0.3px;
+        }
+        
+        .back-to-services:hover {
+            color: #1a2b4c;
+            gap: 10px;
+            text-decoration: none;
+        }
+        
+        /* Responsive breakpoints - maintain proper stacking */
+        @media (max-width: 992px) {
+            .columns_wrap > [class*="column_item"] {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .columns_wrap > [class*="column_item"] {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .service-detail-card {
+                padding: 24px;
+            }
+            .service-detail-card h3 {
+                font-size: 22px;
+                padding-left: 16px;
+            }
+            .post_title {
+                font-size: 17px;
+                margin: 18px 18px 10px;
+            }
+            .post_content {
+                padding: 0 18px 20px;
+            }
+        }
+        
+        /* Container and page content fixes for proper alignment */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .page_content {
+            padding: 0 15px;
+        }
+        
+        /* Company promise section - original styling */
+        .parallax_section {
+            margin: 50px 0 0;
+        }
+        
+        .sc_parallax_overlay {
+            padding: 70px 20px;
+            background: rgba(26,43,76,0.92);
+            text-align: center;
+        }
+        
+        .sc_parallax_overlay h2 {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: -0.3px;
+        }
+        
+        .sc_parallax_overlay p {
+            color: rgba(255,255,255,0.85);
+            font-size: 17px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Clients section - original */
+        .clients_section {
+            padding: 50px 0;
+        }
+        
+        .sc_title_regular {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a2b4c;
+            margin-bottom: 40px;
+            letter-spacing: -0.2px;
+        }
+        
+        /* Ensure no extra spacing or alignment issues */
+        .fullwidth_section {
+            width: 100%;
+            overflow: visible;
+        }
+        
+        .sc_section {
+            display: block;
+        }
+        
+        /* Remove any default bootstrap rounding that might appear */
+        img, .thumbnail, .img-responsive {
+            border-radius: 0;
+        }
+        
+        /* Clean button styling */
+        .sc_button_bg_underline {
+            background: transparent;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .sc_button_bg_underline:hover {
+            border-bottom-color: #e9a83b;
+        }
+        
+        /* Fix hover_wrap icon styling */
+        .icon-link:before, .icon-resize-full:before, .icon-right:before {
+            font-family: "fontello";
+            font-style: normal;
+            font-weight: normal;
+        }
+        
+        .icon-link:before { content: '\e80a'; }
+        .icon-resize-full:before { content: '\e812'; }
+        .icon-right:before { content: '\e80e'; }
+    </style>
     <link rel="stylesheet" id="responsive-style-css" href="css/responsive.css" type="text/css" media="all">
-    <!--<link rel="stylesheet" id="customizer-style-css" href="custom_tools/css/front.customizer.css" type="text/css" media="all">-->
 </head>
 
 <body class="page body_style_wide body_filled article_style_stretch top_panel_opacity_transparent top_panel_show top_panel_above top_panel_over user_menu_hide sidebar_hide fixed_top_menu top_image_show"> 
 
     <div class="body_wrap">
-
         <div class="page_wrap">
 
             <div class="top_panel_fixed_wrap"></div>
             <header class="top_panel_wrap">
-                <!-- FINAL NAVIGATION BAR: Home, Our Services, About Us, Facility & Infrastructure, Why Us, Contact Us -->
-                <!-- Removed user menu / login / socials per final design specification -->
                 <div class="menu_main_wrap logo_left menu_show">
                     <div class="container">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="images/icon/157x54.png" class="logo_main" alt="Global Logistics Logo">
+                                <img src="images/icon/157x54.png" class="logo_main" alt="Seveillar Clinical Supplies Logo">
                                 <span class="logo_info"></span>
                             </a>
                         </div>
                         <div class="menu_main">
                             <nav class="menu_main_nav_area">
                                 <ul id="menu_main" class="menu_main_nav">
-                                    <!-- Home with dropdown -->
                                     <li class="menu-item menu-item-has-children">
                                         <a href="index.html" class="sf-with-ul">Home</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <a href="index.html">Homepage Default</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="homepage-optional.html">Homepage Optional</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="homepage-creative.html">Homepage Creative</a>
-                                            </li>
+                                            <li class="menu-item"><a href="index.html">Homepage Default</a></li>
+                                            <li class="menu-item"><a href="homepage-optional.html">Homepage Optional</a></li>
+                                            <li class="menu-item"><a href="homepage-creative.html">Homepage Creative</a></li>
                                         </ul>
                                     </li>
-                                    <!-- Our services - current page active -->
-                                    <li class="menu-item current-menu-item current_page_item">
-                                        <a href="our-services.html">Our services</a>
-                                    </li>
-                                    <!-- About Us -->
-                                    <li class="menu-item">
-                                        <a href="about-us.html">About Us</a>
-                                    </li>
-                                    <!-- Facility & Infrastructure -->
-                                    <li class="menu-item">
-                                        <a href="facility-infrastructure.html">Facility & Infrastructure</a>
-                                    </li>
-                                    <!-- Why Us -->
-                                    <li class="menu-item">
-                                        <a href="why-us.html">Why Us</a>
-                                    </li>
-                                    <!-- Contact Us -->
-                                    <li class="menu-item">
-                                        <a href="contacts.html">Contact Us</a>
-                                    </li>
+                                    <li class="menu-item current-menu-item current_page_item"><a href="our-services.html">Our services</a></li>
+                                    <li class="menu-item"><a href="about-us.html">About Us</a></li>
+                                    <li class="menu-item"><a href="facility-infrastructure.html">Facility & Infrastructure</a></li>
+                                    <li class="menu-item"><a href="why-us.html">Why Us</a></li>
+                                    <li class="menu-item"><a href="contacts.html">Contact Us</a></li>
                                 </ul>
                             </nav>
                             <a href="#" class="menu_main_responsive_button icon-menu"></a>
@@ -86,18 +441,19 @@
             <section class="top_panel_image top_panel_bg1">
                 <div class="top_panel_image_hover"></div>
                 <div class="top_panel_image_header">
-                    <h1 class="top_panel_image_title entry-title">Our services</h1>
+                    <h1 class="top_panel_image_title entry-title">Clinical Supply Services</h1>
                     <div class="breadcrumbs">
                         <span class="breadcrumbs_item_first">You Are Here:</span>
                         <a class="breadcrumbs_item home" href="index.html">Home</a>
                         <span class="breadcrumbs_delimiter"></span>
-                        <span class="breadcrumbs_item current">Our services</span>
+                        <span class="breadcrumbs_item current">Clinical Supply Services</span>
                     </div>
                 </div>
             </section>
 
             <div class="page_content container">
 
+                <!-- SERVICE CARDS SECTION - PROPERLY ALIGNED 6-COLUMN GRID, EDGY CORNERS, ORIGINAL HOVER BEHAVIOR -->
                 <section class="fullwidth_section news_section">
                     <div class="container-fluid">
                         <div class="row">
@@ -106,25 +462,25 @@
                                     <div class="sc_content container">
                                         <div class="sc_blogger layout_news template_news sc_blogger_horizontal">
                                             <div class="columns_wrap">
-                                                <!-- Service 1: Air Freight Forwarding -->
-                                                <div class="col-sm-4 column_item_1">
+                                                <!-- SERVICE CARD 1 -->
+                                                <div class="column_item_1">
                                                     <div class="post_item post_item_news sc_blogger_item">
                                                         <div class="post_featured">
                                                             <div class="post_thumb">
-                                                                <img alt="Air Freight Forwarding" src="images/news/400x250.png">
+                                                                <img alt="Clinical Supplies Consultancy" src="images/news/400x250.png">
                                                                 <div class="hover_wrap">
                                                                     <div class="link_wrap">
-                                                                        <a class="hover_link icon-link" href="air-freight.html"></a>
-                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="Air Freight Forwarding"></a>
+                                                                        <a class="hover_link icon-link" href="#service1"></a>
+                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="Clinical Supplies Consultancy & Project Management"></a>
                                                                     </div>
                                                                 </div>          
                                                             </div>
                                                         </div>                                                    
-                                                        <h4 class="post_title sc_title sc_blogger_title">Air Freight Forwarding</h4>            
+                                                        <h4 class="post_title sc_title sc_blogger_title">Clinical Supplies Consultancy & Project Management</h4>            
                                                         <div class="post_content sc_blogger_content">
                                                             <div class="post_descr">
-                                                                <p>As a market leader in global air freight forwarding, Global Logistics excels in providing tailored transportation solutions for time-critical shipments worldwide.</p>
-                                                                <a href="air-freight.html" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
+                                                                <p>Seveillar provides strategic clinical supplies consultancy and end-to-end project management solutions for global clinical trials. Our expertise includes supply planning, risk mitigation, forecasting, vendor coordination, and study start-up support to ensure seamless trial execution.</p>
+                                                                <a href="#service1" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
                                                                     Learn more
                                                                     <span class="sc_button_iconed icon-right"></span>
                                                                 </a>
@@ -132,25 +488,25 @@
                                                         </div>  
                                                     </div>      
                                                 </div>  
-                                                <!-- Service 2: Supply Chain Security -->
-                                                <div class="col-sm-4 column_item_2">
+                                                <!-- SERVICE CARD 2 -->
+                                                <div class="column_item_2">
                                                     <div class="post_item post_item_news sc_blogger_item">
                                                         <div class="post_featured">
                                                             <div class="post_thumb">
-                                                                <img alt="Supply Chain Security" src="images/news/400x250.png">
+                                                                <img alt="Clinical Manufacturing" src="images/news/400x250.png">
                                                                 <div class="hover_wrap">
                                                                     <div class="link_wrap">
-                                                                        <a class="hover_link icon-link" href="supply-chain-security.html"></a>
-                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="Supply Chain Security"></a>
+                                                                        <a class="hover_link icon-link" href="#service2"></a>
+                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="Clinical Supplies Manufacturing"></a>
                                                                     </div>
                                                                 </div>          
                                                             </div>
                                                         </div>                                                    
-                                                        <h4 class="post_title sc_title sc_blogger_title">Supply Chain Security</h4>          
+                                                        <h4 class="post_title sc_title sc_blogger_title">Clinical Supplies Manufacturing</h4>          
                                                         <div class="post_content sc_blogger_content">
                                                             <div class="post_descr">
-                                                                <p>Our comprehensive security solutions protect your cargo at every stage, from origin to destination, ensuring compliance and peace of mind.</p>
-                                                                <a href="supply-chain-security.html" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
+                                                                <p>We provide compliant clinical supplies manufacturing solutions including active dosage form manufacturing, placebo manufacturing through approved cGMP partners, and over-encapsulation services for blinded clinical studies.</p>
+                                                                <a href="#service2" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
                                                                     Learn more
                                                                     <span class="sc_button_iconed icon-right"></span>
                                                                 </a>
@@ -158,25 +514,25 @@
                                                         </div>  
                                                     </div>      
                                                 </div>  
-                                                <!-- Service 3: E-commerce Logistics -->
-                                                <div class="col-sm-4 column_item_3">
+                                                <!-- SERVICE CARD 3 -->
+                                                <div class="column_item_3">
                                                     <div class="post_item post_item_news sc_blogger_item">
                                                         <div class="post_featured">
                                                             <div class="post_thumb">
-                                                                <img alt="The E-commerce Effect" src="images/news/400x250.png">
+                                                                <img alt="Comparator Sourcing" src="images/news/400x250.png">
                                                                 <div class="hover_wrap">
                                                                     <div class="link_wrap">
-                                                                        <a class="hover_link icon-link" href="ecommerce-logistics.html"></a>
-                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="E-commerce Logistics"></a>
+                                                                        <a class="hover_link icon-link" href="#service3"></a>
+                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="Comparator & Ancillary Supplies Sourcing"></a>
                                                                     </div>
                                                                 </div>          
                                                             </div>
                                                         </div>                                                    
-                                                        <h4 class="post_title sc_title sc_blogger_title">E-commerce Logistics</h4>          
+                                                        <h4 class="post_title sc_title sc_blogger_title">Comparator & Ancillary Supplies Sourcing</h4>          
                                                         <div class="post_content sc_blogger_content">
                                                             <div class="post_descr">
-                                                                <p>End-to-end e-commerce fulfillment solutions designed to optimize your online retail operations and deliver exceptional customer experiences.</p>
-                                                                <a href="ecommerce-logistics.html" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
+                                                                <p>Seveillar offers global sourcing solutions for comparator drugs and ancillary clinical trial supplies through a trusted network of approved wholesalers and distributors while ensuring full traceability and regulatory compliance.</p>
+                                                                <a href="#service3" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
                                                                     Learn more
                                                                     <span class="sc_button_iconed icon-right"></span>
                                                                 </a>
@@ -184,25 +540,25 @@
                                                         </div>  
                                                     </div>      
                                                 </div>  
-                                                <!-- Service 4: Ocean Cargo -->
-                                                <div class="col-sm-4 column_item_4">
+                                                <!-- SERVICE CARD 4 -->
+                                                <div class="column_item_4">
                                                     <div class="post_item post_item_news sc_blogger_item">
                                                         <div class="post_featured">
                                                             <div class="post_thumb">
-                                                                <img alt="Ocean Cargo Roundtable" src="images/news/400x250.png">
+                                                                <img alt="Packaging & Labelling" src="images/news/400x250.png">
                                                                 <div class="hover_wrap">
                                                                     <div class="link_wrap">
-                                                                        <a class="hover_link icon-link" href="ocean-freight.html"></a>
-                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="Ocean Freight Forwarding"></a>
+                                                                        <a class="hover_link icon-link" href="#service4"></a>
+                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="Blinding, Packaging & Labelling"></a>
                                                                     </div>
                                                                 </div>          
                                                             </div>
                                                         </div>                                                        
-                                                        <h4 class="post_title sc_title sc_blogger_title">Ocean Freight Forwarding</h4>            
+                                                        <h4 class="post_title sc_title sc_blogger_title">Clinical Supplies Blinding, Packaging & Labelling</h4>            
                                                         <div class="post_content sc_blogger_content">
                                                             <div class="post_descr">
-                                                                <p>Full container load (FCL) and less than container load (LCL) shipping solutions with competitive rates and reliable transit times across all major trade lanes.</p>
-                                                                <a href="ocean-freight.html" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
+                                                                <p>We provide customized blinding strategies, protocol-specific packaging solutions, primary and secondary packaging, and compliant clinical trial labelling services for global studies across multiple dosage forms and storage conditions.</p>
+                                                                <a href="#service4" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
                                                                     Learn more
                                                                     <span class="sc_button_iconed icon-right"></span>
                                                                 </a>
@@ -210,25 +566,25 @@
                                                         </div>  
                                                     </div>      
                                                 </div>  
-                                                <!-- Service 5: Customs Brokerage -->
-                                                <div class="col-sm-4 column_item_5">
+                                                <!-- SERVICE CARD 5 -->
+                                                <div class="column_item_5">
                                                     <div class="post_item post_item_news sc_blogger_item">
                                                         <div class="post_featured">
                                                             <div class="post_thumb">
-                                                                <img alt="Import Fundamentals" src="images/news/400x250.png">
+                                                                <img alt="Global Logistics" src="images/news/400x250.png">
                                                                 <div class="hover_wrap">
                                                                     <div class="link_wrap">
-                                                                        <a class="hover_link icon-link" href="customs-brokerage.html"></a>
-                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="Customs Brokerage"></a>
+                                                                        <a class="hover_link icon-link" href="#service5"></a>
+                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="Storage, Distribution & Global Logistics"></a>
                                                                     </div>
                                                                 </div>          
                                                             </div>
                                                         </div>                                                        
-                                                        <h4 class="post_title sc_title sc_blogger_title">Customs Brokerage</h4>            
+                                                        <h4 class="post_title sc_title sc_blogger_title">Storage, Distribution & Global Logistics Management</h4>            
                                                         <div class="post_content sc_blogger_content">
                                                             <div class="post_descr">
-                                                                <p>Expert customs clearance and trade compliance services to ensure smooth border crossings and minimize delays for your international shipments.</p>
-                                                                <a href="customs-brokerage.html" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
+                                                                <p>Our temperature-controlled storage and global logistics solutions ensure secure handling, distribution, and delivery of clinical supplies with full regulatory compliance, real-time monitoring, and complete supply chain traceability.</p>
+                                                                <a href="#service5" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
                                                                     Learn more
                                                                     <span class="sc_button_iconed icon-right"></span>
                                                                 </a>
@@ -236,25 +592,25 @@
                                                         </div>  
                                                     </div>      
                                                 </div> 
-                                                <!-- Service 6: Road & Rail Freight -->
-                                                <div class="col-sm-4 column_item_6">
+                                                <!-- SERVICE CARD 6 -->
+                                                <div class="column_item_6">
                                                     <div class="post_item post_item_news sc_blogger_item">
                                                         <div class="post_featured">
                                                             <div class="post_thumb">
-                                                                <img alt="Intermodal Roundtable" src="images/news/400x250.png">
+                                                                <img alt="IRT Services" src="images/news/400x250.png">
                                                                 <div class="hover_wrap">
                                                                     <div class="link_wrap">
-                                                                        <a class="hover_link icon-link" href="road-rail-freight.html"></a>
-                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="Road & Rail Freight"></a>
+                                                                        <a class="hover_link icon-link" href="#service6"></a>
+                                                                        <a class="hover_view icon-resize-full" href="images/news/1800x1125.png" title="IVRS / IWRS Services"></a>
                                                                     </div>
                                                                 </div>          
                                                             </div>
                                                         </div>                                                        
-                                                        <h4 class="post_title sc_title sc_blogger_title">Road & Rail Freight</h4>            
+                                                        <h4 class="post_title sc_title sc_blogger_title">IVRS / IWRS (IRT) Services</h4>            
                                                         <div class="post_content sc_blogger_content">
                                                             <div class="post_descr">
-                                                                <p>Comprehensive overland transportation solutions including full truckload, less-than-truckload, and intermodal rail services across North America and Europe.</p>
-                                                                <a href="road-rail-freight.html" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
+                                                                <p>Seveillar provides customized IVRS/IWRS (IRT) solutions for global clinical trials including patient randomization, supply management, enrollment tracking, cohort management, and 24×7 global support.</p>
+                                                                <a href="#service6" class="sc_button sc_button_square sc_button_bg_underline sc_button_iconed">
                                                                     Learn more
                                                                     <span class="sc_button_iconed icon-right"></span>
                                                                 </a>
@@ -271,104 +627,59 @@
                     </div>                
                 </section>
 
+                <!-- DETAILED SERVICE CONTENT SECTION - STATIC, NO HOVER EFFECTS -->
+                <div class="service-details-wrapper" id="detailed-services">
+                    <a href="#" class="back-to-services" id="backToTopBtn">← Back to services overview</a>
+                    
+                    <div id="service1" class="service-detail-card"><h3>Clinical Supplies Consultancy & Project Management</h3><p>At Seveillar Clinical Supplies Services, our Clinical Supplies Consultancy & Project Management service is designed to support sponsors, biotechnology companies, and CROs in planning and executing efficient, compliant, and cost-effective clinical trial supply strategies.</p><p>With extensive experience in global clinical trials, our team provides strategic guidance, operational expertise, and end-to-end project oversight to ensure seamless clinical supply execution from study start-up to close-out.</p><h4>Our Key Service Offerings:</h4><ul class="highlight-list"><li><strong>Development of Clinical Supplies Management Strategy:</strong> We develop comprehensive Clinical Supplies Management Strategies for global clinical studies, aligned with protocol requirements, study timelines, and regulatory expectations.</li><li><strong>Clinical Supply Chain Consultation:</strong> Our experts provide clinical supply chain consultation to design and implement efficient supply models, ensuring seamless coordination across manufacturing, packaging, storage, and distribution activities.</li><li><strong>Consultation & Designing of Innovative Blinding Techniques:</strong> We offer consultation and design of innovative blinding techniques to support blinded clinical trials.</li><li><strong>Strategic Clinical Supply Planning:</strong> We collaborate closely with sponsors and study teams to develop customized clinical supply strategies aligned with study design, timelines, and regulatory requirements.</li><li><strong>End-to-End Project Management:</strong> Our dedicated project managers act as a single point of contact, coordinating all clinical supply activities, timelines, and stakeholders.</li><li><strong>Risk Management & Mitigation:</strong> Our proactive approach identifies potential supply chain challenges early and implements mitigation strategies.</li><li><strong>Global Trial Support:</strong> Seveillar supports multi-country and global clinical trials with cross-border supply management.</li></ul></div>
+
+                    <div id="service2" class="service-detail-card"><h3>Clinical Supplies Manufacturing</h3><p>Seveillar Clinical Supplies Services provides Clinical Supplies Manufacturing solutions designed to support global clinical trials with precision, compliance, and operational excellence. Our manufacturing capabilities are aligned with global regulatory standards and supported by robust infrastructure, experienced professionals, and quality-driven processes.</p><h4>Our Manufacturing Capabilities:</h4><ul class="highlight-list"><li><strong>Placebo & Active Dosage Form Manufacturing:</strong> Seveillar supports Active Dosage Form Manufacturing through qualified and compliant manufacturing processes. Manufacturing of placebo is carried out through approved third-party cGMP facilities, ensuring quality, consistency, and compliance.</li><li><strong>Over Encapsulation:</strong> We provide Over Encapsulation services to support blinded clinical trials, ensuring uniformity between placebo and active products while maintaining product stability and quality.</li><li><strong>Strategic Tie-Up with 3rd Party cGMP Contract Manufacturers:</strong> Through strategic partnerships with qualified third-party cGMP contract manufacturers, we extend our capabilities to support diverse dosage forms, scale-up requirements, and global clinical study needs while maintaining strict quality oversight.</li></ul></div>
+
+                    <div id="service3" class="service-detail-card"><h3>Comparator & Ancillary Supplies Sourcing</h3><p>Seveillar Clinical Supplies Services offers comprehensive Comparator & Ancillary Supplies Sourcing solutions to support global clinical trials with reliability, compliance, and efficiency. We specialize in sourcing comparator products and ancillary supplies from qualified global sources, ensuring uninterrupted clinical trial execution while maintaining regulatory compliance and product integrity.</p><h4>Our Sourcing Capabilities:</h4><ul class="highlight-list"><li><strong>Global Sourcing for Clinical Trials:</strong> We ensure procurement from qualified and approved sources while adhering to regional regulatory requirements.</li><li><strong>Network of Approved Global Wholesalers:</strong> We maintain a strong network of approved wholesalers and distributors globally for timely procurement.</li><li><strong>Comparator Sourcing:</strong> We source comparator drugs including branded and generic products with proper documentation and batch traceability.</li><li><strong>Ancillary Supplies Sourcing:</strong> Medical devices, lab kits, syringes, trial-specific kits, temperature monitoring devices, patient kits and consumables.</li><li><strong>Cold Chain Management:</strong> Validated cold chain processes ensure product integrity throughout sourcing, storage, and transportation.</li><li><strong>Traceability & Documentation:</strong> Complete traceability with Certificates of Analysis, product authentication, purchase records, temperature monitoring reports, chain of custody, and import/export documentation.</li></ul></div>
+
+                    <div id="service4" class="service-detail-card"><h3>Clinical Supplies Blinding, Packaging & Labelling</h3><p>Seveillar Clinical Supplies Services provides comprehensive Clinical Supplies Blinding, Packaging & Labelling solutions designed to support global clinical trials with accuracy, compliance, and operational flexibility. Our services are tailored to meet protocol-specific requirements while ensuring regulatory compliance, product integrity, and study blinding throughout the clinical trial lifecycle.</p><h4>Our Packaging & Labelling Capabilities:</h4><ul class="highlight-list"><li><strong>Blinding Strategy Design & Implementation:</strong> Customized blinding strategies aligned with study protocols and trial objectives.</li><li><strong>Primary Packaging of Non-Potent Oral Solid Dosage Forms:</strong> Tablets, capsules, lozenges under controlled conditions.</li><li><strong>Secondary Packaging for All Dosage Forms:</strong> Temperature-controlled environments including Controlled Room Temperature (15°C to 25°C), Refrigerated (2°C to 8°C), and Frozen (-15°C to -25°C).</li><li><strong>Clinical Supplies Label Design & Generation:</strong> Primary labels, secondary labels, booklet labels, multi-language labels, randomization labels, kit labels, temperature-specific labels, Expiry Date Extension Labels.</li><li><strong>Protocol-Specific Packaging Solutions:</strong> Customized configurations based on study design, blinding requirements, distribution strategy, storage conditions, and country-specific regulations.</li></ul><div><span class="temp-badge">Controlled Room Temperature: 15°C to 25°C</span><span class="temp-badge">Refrigerated: 2°C to 8°C</span><span class="temp-badge">Frozen: -15°C to -25°C</span></div></div>
+
+                    <div id="service5" class="service-detail-card"><h3>Storage, Distribution & Global Logistics Management</h3><p>Seveillar Clinical Supplies Services provides comprehensive Storage, Distribution & Global Logistics Management solutions designed to ensure the safe handling, storage, and delivery of clinical trial supplies across global locations. Our services are built on robust infrastructure, regulatory compliance, and operational excellence to support seamless execution of clinical trials worldwide.</p><h4>Our Storage & Distribution Capabilities:</h4><ul class="highlight-list"><li><strong>Temperature-Controlled Storage Solutions:</strong> Controlled Room Temperature (15°C to 25°C and 20°C to 25°C), Refrigerated Storage (2°C to 8°C), Frozen Storage (-15°C to -25°C), Ultra-Low Temperature Storage (-80°C). Facilities equipped with validated storage systems, continuous temperature monitoring, alarm systems, and backup power.</li><li><strong>Global Distribution & Logistics Management:</strong> End-to-end global distribution ensuring timely and compliant delivery to clinical sites, depots, and investigational centers worldwide.</li><li><strong>Regulatory-Compliant Storage & Distribution:</strong> All activities conducted in compliance with cGMP, GDP, WHO Guidelines, and Country-Specific Regulatory Requirements.</li><li><strong>Global Depot Network:</strong> Leveraging a global depot network to support efficient regional distribution, reduce transit times, and ensure uninterrupted supply.</li></ul><div><span class="temp-badge">CRT: 15°C-25°C</span><span class="temp-badge">Refrigerated: 2°C-8°C</span><span class="temp-badge">Frozen: -15°C to -25°C</span><span class="temp-badge">Ultra-Low: -80°C</span></div></div>
+
+                    <div id="service6" class="service-detail-card"><h3>IVRS / IWRS (IRT) Services</h3><p>Seveillar Clinical Supplies Services offers comprehensive IVRS/IWRS (Interactive Response Technology - IRT) Services to support efficient clinical trial management and clinical supply control for global studies. Our solutions are designed to streamline patient randomization, drug supply management, and trial oversight while ensuring compliance with global regulatory requirements.</p><p>With a customized, user-friendly, and regulatory-compliant platform, Seveillar enables sponsors and CROs to efficiently manage clinical trials across multiple countries, sites, and patient populations.</p><h4>Our IRT Capabilities:</h4><ul class="highlight-list"><li><strong>Customized IRT Platform for Global Clinical Studies:</strong> Patient randomization, trial supply management, site resupply management, cohort management, enrollment tracking, and study-specific workflows. Tailored to meet protocol-specific requirements.</li><li><strong>24×7 Global Call Support:</strong> Dedicated support team ensures timely resolution of queries and uninterrupted study operations across all time zones.</li></ul></div>
+                </div>
             </div>
             
-            <section class="parallax_section">
-                <div class="sc_parallax bg_tint_dark" data-parallax-speed="0.6" data-parallax-x-pos="50%" data-parallax-y-pos="50%">
-                    <div class="sc_parallax_content parallax_bg1">
-                        <div class="sc_parallax_overlay">
-                            <div class="sc_section aligncenter">
-                                <h2 class="sc_title sc_title_underline sc_align_center">The company promise</h2>
-                                <p>As a global logistics partner we promise to take care of all supply chain management, to make your<br>
-                                shipments travel safe, fast and on time.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="page_content container">
-
-                <section class="fullwidth_section clients_section">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="sc_content container">
-                                    <h2 class="sc_title sc_title_regular sc_align_center">Trusted by industry leaders</h2>
-                                    <div class="sc_section">
-                                        <div id="clients_scroll" class="sc_scroll sc_scroll_horizontal swiper-slider-container scroll-container swiper-free-mode clients_scroll">
-                                            <div class="sc_scroll_wrapper swiper-wrapper">
-                                                <div class="sc_scroll_slide swiper-slide">
-                                                    <div class="sc_image_wrap alignleft">
-                                                        <figure class="sc_image sc_image_shape_square">
-                                                            <img src="images/slider/99x99.png" alt="Client logo">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="sc_image_wrap alignleft">
-                                                        <figure class="sc_image sc_image_shape_square">
-                                                            <img src="images/slider/99x99.png" alt="Client logo">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="sc_image_wrap alignleft">
-                                                        <figure class="sc_image sc_image_shape_square">
-                                                            <img src="images/slider/99x99.png" alt="Client logo">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="sc_image_wrap alignleft">
-                                                        <figure class="sc_image sc_image_shape_square">
-                                                            <img src="images/slider/99x99.png" alt="Client logo">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="sc_image_wrap alignleft">
-                                                        <figure class="sc_image sc_image_shape_square">
-                                                            <img src="images/slider/99x99.png" alt="Client logo">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="sc_image_wrap alignleft">
-                                                        <figure class="sc_image sc_image_shape_square">
-                                                            <img src="images/slider/99x99.png" alt="Client logo">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="sc_image_wrap alignleft">
-                                                        <figure class="sc_image sc_image_shape_square">
-                                                            <img src="images/slider/99x99.png" alt="Client logo">
-                                                        </figure>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="clients_scroll_bar" class="sc_scroll_bar sc_scroll_bar_horizontal clients_scroll_bar">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                            
-                            </div>
-                        </div>
-                    </div>
-                </section>         
-                  
-            </div>
-
-            <!-- FOOTER SECTION COMPLETELY REMOVED AS REQUESTED -->
-            <!-- All footer content including Global Logistics description, Contact Info, Industry Insights, Quick Links, and copyright section has been removed -->
-
+            <!-- COMPANY PROMISE SECTION -->
+<section class="promise_section">
+    <div class="promise_overlay">
+        <div class="promise_content">
+            <p class="promise_eyebrow">Our Commitment</p>
+            <h2 class="promise_title">The Company Promise</h2>
+            <div class="promise_divider"></div>
+            <p class="promise_text">At Seveillar Clinical Supplies Services, we are committed to delivering reliable, compliant, and patient-focused clinical supply solutions that support successful clinical trials across global regions.</p>
         </div>
-
     </div>
-
-<div class="preloader">
-    <div class="preloader_image"></div>
-</div>
+</section>
+        </div>
+    </div>
 
     <script type="text/javascript" src="js/vendor/jquery.js"></script>
     <script type="text/javascript" src="js/vendor/jquery-migrate.min.js"></script>
     <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
-
-    <!--<script type="text/javascript" src="custom_tools/js/front.customizer.js"></script>
-    <script type="text/javascript" src="custom_tools/js/skin.customizer.js"></script>-->
-    
     <script type="text/javascript" src="js/_packed.js"></script>
     <script type="text/javascript" src="js/shortcodes.min.js"></script>
     <script type="text/javascript" src="js/_main.js"></script>
-
+    <script>    
+        // Smooth scroll to detailed sections and back to top functionality
+        document.querySelectorAll('a[href^="#service"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        document.getElementById('backToTopBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="icon" type="image/x-icon" href="images/icon/favicon.ico">
-    <title>Global Logistics | Just another HTML site</title>
+    <title>Global Logistics | Freight & Supply Chain Solutions</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" id="packed-css" href="css/_packed.css" type="text/css" media="all">
     <link rel="stylesheet" id="fontello-style-css" href="css/fontello.css" type="text/css" media="all">
@@ -16,7 +16,19 @@
     <link rel="stylesheet" id="custom-style-css" href="css/custom-style.css" type="text/css" media="all">
     <style id="custom-style-inline-css" type="text/css"></style>
     <link rel="stylesheet" id="responsive-style-css" href="css/responsive.css" type="text/css" media="all">
-    <!--<link rel="stylesheet" id="customizer-style-css" href="custom_tools/css/front.customizer.css" type="text/css" media="all">-->
+    <style>
+        /* Additional styling for header consistency */
+        .top_panel_wrap .menu_main_nav > li > a {
+            font-weight: 500;
+        }
+        .menu_main_wrap .logo img.logo_main {
+            max-height: 54px;
+            width: auto;
+        }
+        .menu_main_nav_area .menu_main_nav .sub-menu {
+            z-index: 1000;
+        }
+    </style>
 </head>
 
 <body class="page body_style_wide body_filled article_style_stretch top_panel_opacity_solid top_panel_show top_panel_above user_menu_hide sidebar_hide fixed_top_menu">
@@ -27,9 +39,9 @@
 
             <div class="top_panel_fixed_wrap"></div>
             <header class="top_panel_wrap">
+                <!-- Menu User Wrap (kept from second code but simplified to match first code's style) -->
                 <div class="menu_user_wrap">
                     <div class="container">
-
                         <div class="menu_user_area menu_user_right menu_user_nav_area">
                             <ul id="menu_user" class="menu_user_nav">
                                 <li class="menu-item">
@@ -88,7 +100,6 @@
                                                 </div>
                                             </div>
 
-
                                             <div id="registerForm" class="formItems registerFormBody popup_wrap popup_registration" aria-labelledby="ui-id-2" role="tabpanel">
                                                 <form name="registration_form" method="post" class="popup_form registration_form">
                                                     <input type="hidden" name="redirect_to" value="#">
@@ -120,9 +131,8 @@
                                                 </form>
                                                 <div class="result messageBlock"></div>
                                             </div>
-
-                                        </div>  <!-- /.sc_tabs -->
-                                    </div>      <!-- /.user-popUp -->       
+                                        </div>
+                                    </div>       
                                 </li>
                                 <li class="top_socials">
                                     <div class="sc_socials sc_socials_size_tiny">
@@ -157,21 +167,23 @@
                         <div class="menu_user_area menu_user_left menu_user_contact_area">Call Us Now: 858.536.4161</div>
                     </div>
                 </div>                
+                
+                <!-- MAIN NAVIGATION: EXACTLY MATCHING THE FIRST CODE (Global Logistics | Freight & Supply Chain Solutions) -->
                 <div class="menu_main_wrap logo_left menu_show">
                     <div class="container">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="images/icon/157x54.png" class="logo_main" alt="">
+                                <img src="images/icon/logo.png" class="logo_main" alt="">
                                 <span class="logo_info"></span>
                             </a>
                         </div>
                         <div class="menu_main">
                             <nav class="menu_main_nav_area">
                                 <ul id="menu_main" class="menu_main_nav">
-                                    <li class="menu-item menu-item-has-children">
+                                    <li class="menu-item current-menu-item current-menu-parent menu-item-has-children">
                                         <a href="index.html" class="sf-with-ul">Home</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item">
+                                            <li class="menu-item current-menu-item current_page_item">
                                                 <a href="index.html">Homepage Default</a>
                                             </li>
                                             <li class="menu-item">
@@ -185,131 +197,17 @@
                                     <li class="menu-item">
                                         <a href="our-services.html">Our services</a>
                                     </li>
-                                    <li class="menu-item menu-item-has-children">
-                                        <a href="#" class="sf-with-ul">Features</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <a href="shortcodes.html">Shortcodes</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="typography.html">Typography</a>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="#" class="sf-with-ul">Gallery</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item">
-                                                        <a href="grid-alternative.html">Grid Alternative</a>
-                                                    </li>
-                                                    <li class="menu-item menu-item-has-children">
-                                                        <a href="#" class="sf-with-ul">Classic Style</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="menu-item">
-                                                                <a href="gallery-classic-2-columns.html">2 Columns</a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a href="gallery-classic-3-columns.html">3 Columns</a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a href="gallery-classic-4-columns.html">4 Columns</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item menu-item-has-children">
-                                                        <a href="#" class="sf-with-ul">Grid Style</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="menu-item">
-                                                                <a href="gallery-grid-2-columns.html">2 Columns</a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a href="gallery-grid-3-columns.html">3 Columns</a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a href="gallery-grid-4-columns.html">4 Columns</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item menu-item-has-children">
-                                                        <a href="#" class="sf-with-ul">Masonry Style</a>
-                                                        <ul class="sub-menu">
-                                                            <li class="menu-item">
-                                                                <a href="gallery-masonry-2-columns.html">2 Columns</a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a href="gallery-masonry-3-columns.html">3 Columns</a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a href="gallery-masonry-4-columns.html">4 Columns</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="gallery-post.html">Gallery Post</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="#" class="sf-with-ul">Pages</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item">
-                                                        <a href="about-us.html">About Us</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="team.html">Our team</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="our-prices.html">Our Prices</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="profile.html">Profile</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="company-timeline.html">Company Timeline</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="support.html">Support</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="not_existing_page.html">Page 404</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children current-menu-ancestor current_page_ancestor">
-                                        <a href="blog.html" class="sf-with-ul">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="#" class="sf-with-ul">Blog Style</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item">
-                                                        <a href="post-formats-with-sidebar.html">With Sidebar</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="post-formats-without-sidebar.html">Without sidebar</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="masonry-style.html">Masonry Style</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children current-menu-ancestor current-menu-parent">
-                                                <a href="#" class="sf-with-ul">Blog Post</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item current-menu-item">
-                                                        <a href="standard-post.html">Standard Post</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="standard-post-with-sidebar.html">Standard Post with Sidebar</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                    <li class="menu-item">
+                                        <a href="about-us.html">About Us</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="contacts.html">Contact</a>
+                                        <a href="facility-infrastructure.html">Facility & Infrastructure</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="request-a-quote.html">Request A Quote</a>
+                                        <a href="why-us.html">Why Us</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="contacts.html">Contact Us</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -322,7 +220,7 @@
                                     </form>
                                 </div>
                                 <div class="search_results widget_area">
-                                        <a class="search_results_close icon-cancel"></a>
+                                    <a class="search_results_close icon-cancel"></a>
                                     <div class="search_results_content"></div>
                                 </div>
                             </div>
@@ -331,6 +229,7 @@
                 </div>
             </header>           
 
+            <!-- PAGE TOP WRAPPER (Breadcrumbs and title from second code) -->
             <div class="page_top_wrap page_top_title page_top_breadcrumbs">
                 <div class="container">
                     <div class="breadcrumbs">
@@ -779,9 +678,6 @@
     <script type="text/javascript" src="js/vendor/jquery.js"></script>
     <script type="text/javascript" src="js/vendor/jquery-migrate.min.js"></script>
     <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
-
-    <!--<script type="text/javascript" src="custom_tools/js/front.customizer.js"></script>
-    <script type="text/javascript" src="custom_tools/js/skin.customizer.js"></script>-->
     
     <script type="text/javascript" src="js/_packed.js"></script>
     <script type="text/javascript" src="js/shortcodes.min.js"></script>
