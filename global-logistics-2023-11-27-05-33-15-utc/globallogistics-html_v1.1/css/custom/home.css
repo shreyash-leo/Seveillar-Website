@@ -1,0 +1,141 @@
+/* ===== HERO SLIDER - Pure CSS, no Revolution Slider ===== */
+.hero_slider_section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 0;
+}
+
+.hero_slider {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 400px;
+    max-height: 700px;
+    background: #000;
+}
+
+.hero_slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    pointer-events: none;
+}
+
+.hero_slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hero_slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    /* Kill any transform that could cause zoom */
+    transform: none !important;
+    animation: none !important;
+}
+
+/* Dot navigation */
+.hero_slider_dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.hero_dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+.hero_dot.active {
+    background: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero_slider {
+        height: 50vw;
+        min-height: 220px;
+    }
+}
+
+/* ===== COMPANY PROMISE BANNER ===== */
+.promise_section {
+    width: 100%;
+    min-height: 440px;
+    background: url('images/slider/hero-banner2.png') center center / cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promise_overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 30, 50, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.promise_content {
+    max-width: 700px;
+    text-align: center;
+}
+
+.promise_eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #e8841a;
+    margin-bottom: 14px;
+}
+
+.promise_title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 18px 0;
+    line-height: 1.2;
+}
+
+.promise_divider {
+    width: 50px;
+    height: 3px;
+    background: #e8841a;
+    margin: 0 auto 22px auto;
+}
+
+.promise_text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .promise_title {
+        font-size: 26px;
+    }
+    .promise_section {
+        min-height: 260px;
+    }
+}

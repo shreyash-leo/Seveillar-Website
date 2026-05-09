@@ -1,0 +1,140 @@
+/* Prevent navbar flicker/layout shift */
+#navbar {
+    min-height: 82px;
+    width: 100%;
+}
+
+/* ===== COMPACT CENTERED NAVBAR FIX ===== */
+
+/* Main navbar container */
+.menu_main_wrap {
+    min-height: 78px !important;
+    height: 78px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+}
+
+/* Inner wrapper */
+.menu_main_wrap .content_wrap,
+.menu_main_wrap .columns_wrap {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Logo */
+.menu_main_wrap .logo {
+    margin: 0 !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Logo image */
+.menu_main_wrap .logo img {
+    height: 60px !important;
+    width: auto !important;
+    width: auto !important;
+    display: block !important;
+
+    transform: scale(1.35) !important;
+    transform-origin: center center !important;
+}
+
+/* Navigation area */
+.menu_main_wrap .menu_main_nav_area {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Main menu UL */
+.menu_main_wrap .menu_main_nav > li {
+    height: 78px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+
+/* Actual nav links */
+.menu_main_wrap .menu_main_nav > li > a {
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: auto !important;
+
+    padding: 0 !important;
+
+    line-height: 1 !important;
+
+    margin: 0 !important;
+
+    position: relative !important;
+
+    top: 2px !important;
+}
+
+/* Proper UL alignment */
+.menu_main_wrap .menu_main_nav {
+    height: 78px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove hidden spacing from theme */
+.menu_main_wrap .menu_main > li > a::before,
+.menu_main_wrap .menu_main > li > a::after {
+    display: none !important;
+}
+
+/* Navbar horizontal layout */
+.menu_main_wrap .container {
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    height: 78px !important;
+
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+/* Prevent logo collapse */
+.menu_main_wrap .logo {
+    flex: 0 0 auto !important;
+}
+
+/* Navigation takes remaining space */
+.menu_main_wrap .menu_main {
+    flex: 1 1 auto !important;
+
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* Prevent nav text from wrapping */
+.menu_main_wrap .menu_main_nav > li > a {
+    white-space: nowrap !important;
+}
+
+/* Proper spacing between nav items */
+.menu_main_wrap .menu_main_nav {
+    gap: 18px !important;
+}
+
+/* Remove fixed widths from theme */
+.menu_main_wrap .menu_main_nav > li {
+    width: auto !important;
+    min-width: auto !important;
+}

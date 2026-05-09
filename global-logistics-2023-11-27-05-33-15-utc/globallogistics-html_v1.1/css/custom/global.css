@@ -1,0 +1,66 @@
+
+/* =========================================
+   UNIVERSAL PAGE BANNER
+========================================= */
+
+.page_banner {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    background: url('../images/slider/hero-banner2.png') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.page_banner_overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 25, 40, 0.65);
+    display: flex;
+    align-items: center;
+}
+
+.page_banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page_banner h1 {
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+.page_banner .breadcrumbs {
+    color: rgba(255,255,255,0.85);
+    font-size: 14px;
+}
+
+.page_banner .breadcrumbs a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.page_banner .breadcrumbs span {
+    margin: 0 8px;
+}
+
+@media (max-width: 768px) {
+
+    .page_banner {
+        height: 240px;
+    }
+
+    .page_banner h1 {
+        font-size: 34px;
+    }
+
+}
+
+/* Shift navbar content slightly to right */
+.menu_main_wrap .container {
+    padding-left: 100px !important;
+}
